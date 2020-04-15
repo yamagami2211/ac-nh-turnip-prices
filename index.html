@@ -8,7 +8,10 @@
   <title>あつまれどうぶつの森 - カブ価予測</title>
   <meta name="description" content="Animal Crossing - Turnip Prophet">
   <meta name="author" content="Mike Bryant">
+  <meta name="theme-color" content="#def2d9">
 
+  <link rel="manifest" href="./manifest.json">
+  <link rel="apple-touch-icon" href="img/192.png">
   <link rel="stylesheet" href="css/styles.css">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -269,13 +272,17 @@
 
   <div class="dialog-box">
     <h2 class="dialog-box__name">Daisy Mae</h2>
-    <p>
+    <p>m
       None of this would have been possible without <a
         href="https://twitter.com/_Ninji/status/1244818665851289602?s=20">Ninji's work</a> figuring out just how Timmy
       and Tommy value their turnips.
     </p>
     <p>
       サポート、コメント、 寄稿は<a href="https://github.com/mikebryant/ac-nh-turnip-prices/issues">Github</a>(オリジナル版のissues)
+    </p>
+    <p>Oh! And let's not forget to thank those who have contributed so far!</p>
+    <p id="contributors">
+      Contributors:
     </p>
   </div>
 
@@ -289,6 +296,29 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="js/predictions.js?001"></script>
   <script src="js/scripts.js?001"></script>
+  <script src="js/contributors.js?001"></script>
+  <script>
+    // Check compatibility for the browser we're running this in
+    if ("serviceWorker" in navigator) {
+      if (navigator.serviceWorker.controller) {
+        console.log(
+          "[PWA] Service Worker already found, skipping register"
+        );
+      } else {
+        // Register the service worker
+        navigator.serviceWorker
+          .register("/service-worker.js", {
+            scope: "./",
+          })
+          .then(function (reg) {
+            console.log(
+              "[PWA] Service worker has been registered for scope: " +
+                reg.scope
+            );
+          });
+      }
+    }
+  </script>
 </body>
 
 </html>
