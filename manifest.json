@@ -1,18 +1,18 @@
 {
-	"name": "カブ価予測ツール - あつまれどうぶつの森のカブ価予測ツール",
-	"short_name": "カブ価予測ツール(非公式日本語訳版)",
-	"description": "あつまれどうぶつの森のカブ価を追跡するアプリ",
+	"name": "あつまれどうぶつの森 - カブ価予測ツール",
+	"short_name": "Turnip Prophet",
+	"description": "あつまれどうぶつの森のカブ価を予測するツールです。",
 	"start_url": "index.html",
 	"display": "standalone",
 	"background_color": "#def2d9",
 	"theme_color": "#def2d9",
 	"icons": [
 		{
-			"src": "/img/192.png",
+			"src": "/img/favicon-192.png",
 			"sizes": "192x192"
 		},
 		{
-			"src": "/img/512.png",
+			"src": "/img/favicon-512.png",
 			"sizes": "512x512"
 		}
 	]
